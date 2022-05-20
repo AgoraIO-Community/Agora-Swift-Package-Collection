@@ -7,5 +7,5 @@ To add this package collection to Xcode, open Xcode and go to:
 Paste the following URL, and the collection will be added for you:
 
 ```
-https://github.com/AgoraIO-Community/Agora-Swift-Package-Collection/blob/main/Agora-Packages.json
+https://raw.githubusercontent.com/AgoraIO-Community/Agora-Swift-Package-Collection/main/Agora-Packages-iOS-signed.json
 ```

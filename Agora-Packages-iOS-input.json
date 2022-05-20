@@ -7,9 +7,6 @@
         { "url": "https://github.com/AgoraIO/AgoraRtcEngine_iOS" },
         { "url": "https://github.com/AgoraIO/AgoraAudio_iOS" },
         { "url": "https://github.com/AgoraIO/AgoraRTM_iOS" },
-        { "url": "https://github.com/AgoraIO-Community/iOS-UIKit" },
-        { "url": "https://github.com/agorabuilder/AgoraFFmpegPlayer_iOS_Preview" },
-        { "url": "https://github.com/agorabuilder/AgoraRtcEngine_iOS_Preview" },
-        { "url": "https://github.com/agorabuilder/AgoraAudio_iOS_Preview" }
+        { "url": "https://github.com/AgoraIO-Community/iOS-UIKit" }
     ]
 }
