@@ -1,7 +1,7 @@
 {
-    "name": "Agora iOS Packages",
-    "overview": "Official Swift packages for iOS from Agora",
-    "keywords": ["Agora", "Video", "Audio", "RTM", "RTC", "webRTC"],
+    "name": "Agora macOS Packages",
+    "overview": "Official Swift packages for macOS from Agora",
+    "keywords": ["Agora", "Video", "Audio", "RTM", "RTC", "webRTC", "macOS"],
     "author": { "name": "Agora.io" },
     "packages": [
         { "url": "https://github.com/AgoraIO/AgoraRtcEngine_macOS" },
