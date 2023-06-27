@@ -1,0 +1,42 @@
+name: Generate Unsigned Package
+
+on:
+  push:
+    branches:
+      - "main"
+  pull_request:
+    branches:
+    - "*"
+  schedule:
+    - cron:  '0 3 * * *' # Runs every day at 3am
+
+jobs:
+  build:
+    runs-on: macos-13
+    steps:
+    - name: Checkout 🛎
+      uses: actions/checkout@v3
+    - name: Get Package Collection Generator
+      uses: actions/checkout@v3
+      with:
+        repository: apple/swift-package-collection-generator
+        path: swift-package-collection-generator
+    - name: Build Package Collection Generator 🛠️
+      run: |
+        cd swift-package-collection-generator
+        swift build --configuration release
+    - name: Build Unsigned Package 🛠️
+      run: swift-package-collection-generator/.build/release/package-collection-generate Agora-Packages-iOS-input.json Agora-Packages-iOS.json
+    - name: Upload Unsigned Package ⬆️
+      uses: actions/upload-artifact@v3
+      with:
+        name: Agora-Packages-iOS.json
+        path: Agora-Packages-iOS.json
+    - name: Publish Release
+      if: github.ref_name == github.event.repository.default_branch
+      uses: svenstaro/upload-release-action@2.6.0
+      with:
+        file: Agora-Packages-iOS.json
+        asset_name: Agora-Packages-iOS.json
+        overwrite: true
+        tag: main-release
